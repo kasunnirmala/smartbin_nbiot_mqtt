@@ -35,12 +35,6 @@ console.log(err);
         console.log(dto);
         dto.val = dto.val == 0 ? lastVal : dto.val;
         lastVal = dto.val;
-        var topc = "smartbin/nbiot/time/" + dto.node_id;
-        var time = 100;
-        client.publish(topc, time.toString());
-        console.log(topc);
-        console.log(time);
-        console.log("SENT");
 
 
         try {
