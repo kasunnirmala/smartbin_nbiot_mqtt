@@ -1,5 +1,5 @@
 var net = require('net');
-
+var moment = require('moment-timezone');
 var DeviceDataModel = require('./model/deviceData');
 const express = require('express');
 var socket = require('./app');
@@ -20,7 +20,7 @@ console.log(err);
 
     soc.on('data', async function (data) {
         var message = data.toString();
-        console.log(data);
+        console.log(message);
 
         var dto = {};
         var splitArr = message.toString().split(':');
