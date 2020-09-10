@@ -8,6 +8,7 @@ const DeviceDataSchema = new mongoose.Schema({
     val:String,
     timestamp: Number,
     datetime: String,
+    place:String,
     date: String,
     time:String
 }, {

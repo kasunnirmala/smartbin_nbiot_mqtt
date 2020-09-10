@@ -45,6 +45,7 @@ client.on('message', async function (topic, message) {
                 node_id: dto.node_id,
                 val: dto.val,
                 timestamp: dto.timestamp,
+place:'cocacola',
                 datetime: dto.datetime,
                 date: dto.date,
                 time: dto.time

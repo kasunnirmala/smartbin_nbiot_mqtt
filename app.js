@@ -33,5 +33,5 @@ http.listen(4445, () => {
 
 
 
-// require('./mqtt');
-require('./tcp');
+ require('./mqtt');
+//require('./tcp');

@@ -11,7 +11,7 @@ var lastVal = 0;
 var tcp = net.createServer(function (soc) {
     console.log("CONNECTED");
 
-    soc.setKeepAlive(true);
+//    soc.setKeepAlive(true);
 
 
 soc.on('error', function(err) {

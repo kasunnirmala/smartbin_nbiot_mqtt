@@ -5,7 +5,7 @@ var moment = require('moment-timezone');
 
 router.get('/byDateAndID/:nodeID/:date', async (req, res) => {
     try {
-        var DeviceData = await DeviceDataModel.find({ node_id: req.params.nodeID, date: req.params.date });
+        var DeviceData = await DeviceDataModel.find({ node_id: req.params.nodeID, date: req.params.date, place:'cocacola' });
         res.json(DeviceData);
     } catch (error) {
         res.json({ message: error.message });
