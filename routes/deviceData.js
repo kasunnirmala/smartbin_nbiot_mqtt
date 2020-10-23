@@ -17,12 +17,12 @@ router.get('/byDateAndID/:nodeID/:date', async (req, res) => {
 router.get('/byData/:date', async (req, res) => {
     try {
         var showData = [];
-        var DeviceData = await DeviceDataModel.find({ node_id: "ANANKE002", date: req.params.date});
+        var DeviceData = await DeviceDataModel.find({ node_id: "ANANKE002", date: req.params.date });
         DeviceData.forEach(deviceData => {
             showData.push({
                 datetime: deviceData.datetime,
-                value: deviceData.value,
-                color: deviceData.value < 40 ? "RED" : deviceData.value < 80 ? "ORANGE" : deviceData.value < 120 ? "BLUE" : "GREEN"
+                value: deviceData.val,
+                color: deviceData.val < 40 ? "RED" : deviceData.val < 80 ? "ORANGE" : deviceData.val < 120 ? "BLUE" : "GREEN"
             });
         });
 
